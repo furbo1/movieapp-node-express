@@ -26,6 +26,10 @@ app.get('/search', (req,res) =>{
     res.render('search')
 })
 
+app.get('*', (req,res) =>{
+    res.send('404. This page does not exists. <a href="/search">Return to the homepage</a>')
+})
+
 app.listen(3001, ()=> { 
     console.log("Server running on port 3001")
 })
